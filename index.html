@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nick.Did_it — SPLPH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f5f4f1;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #ebebeb;
+      border: 1px solid #d8d8d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      color: #888;
+      margin-bottom: 1.25rem;
+    }
+
+    .name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 0.2rem;
+      text-align: center;
+    }
+
+    .alias {
+      font-size: 13px;
+      font-weight: 300;
+      color: #999;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .bio {
+      font-size: 14px;
+      font-weight: 300;
+      color: #666;
+      text-align: center;
+      max-width: 280px;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #ffffff;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .link-item:hover {
+      border-color: #bbb;
+      background: #f9f9f9;
+    }
+
+    .link-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #f2f2f2;
+      border: 0.5px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .link-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: #666;
+    }
+
+    .link-text { flex: 1; }
+
+    .link-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1a1a1a;
+      display: block;
+    }
+
+    .link-sub {
+      font-size: 12px;
+      color: #999;
+      font-weight: 300;
+      display: block;
+      margin-top: 1px;
+    }
+
+    .link-arrow {
+      color: #ccc;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #aaa;
+      align-self: flex-start;
+      margin-top: 0.75rem;
+      margin-bottom: -2px;
+      width: 100%;
+    }
+
+    .credits-box {
+      width: 100%;
+      background: #ffffff;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .credits-title {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .credits-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .credit-tag {
+      font-size: 12px;
+      font-weight: 400;
+      color: #666;
+      background: #f2f2f2;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 999px;
+      padding: 4px 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #1a1a1a; color: #f0f0f0; }
+      .avatar { background: #2a2a2a; border-color: #3a3a3a; color: #777; }
+      .name { color: #f0f0f0; }
+      .alias { color: #666; }
+      .bio { color: #888; }
+      .link-item { background: #242424; border-color: #333; }
+      .link-item:hover { background: #2c2c2c; border-color: #444; }
+      .link-icon { background: #2e2e2e; border-color: #3a3a3a; }
+      .link-icon svg { fill: #888; }
+      .link-label { color: #f0f0f0; }
+      .link-sub { color: #666; }
+      .link-arrow { color: #444; }
+      .credits-box { background: #242424; border-color: #333; }
+      .credit-tag { background: #2e2e2e; border-color: #3a3a3a; color: #888; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="avatar">N</div>
+  <h1 class="name">Nick.Did_it</h1>
+  <p class="alias">SPLPH</p>
+  <p class="bio">Professional button pusher.<br>Drums, production, mixing and mastering.</p>
+
+  <div class="links">
+
+    <p class="section-label">Socials</p>
+
+    <a class="link-item" href="https://www.instagram.com/nick.did_it/" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </div>
+      <div class="link-text">
+        <span class="link-label">Instagram</span>
+        <span class="link-sub">@nick.did_it</span>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <p class="section-label">Stream SPLPH</p>
+
+    <a class="link-item" href="https://splph.bandcamp.com" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/></svg>
+      </div>
+      <div class="link-text">
+        <span class="link-label">Bandcamp</span>
+        <span class="link-sub">SPLPH — buy & stream</span>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <a class="link-item" href="https://music.apple.com/us/artist/splph/1273031883" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M23.994 6.124a9.23 9.23 0 0 0-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 0 0-1.877-.706c-.343-.06-.69-.084-1.036-.095-.321-.01-.643 0-.964 0H5.896c-.137 0-.275.005-.41.012C4.51.114 3.83.285 3.21.618 2.11 1.21 1.321 2.15.924 3.348a6.14 6.14 0 0 0-.31 1.554C.566 5.285.53 5.67.53 6.054v11.95c0 .403.04.802.117 1.196.45 2.301 2.3 3.905 4.625 3.972.518.015 1.036.028 1.554.028h11.204c.502 0 1.003-.013 1.504-.028.686-.022 1.365-.163 2.009-.4 1.847-.687 3.015-2.15 3.257-4.09.07-.548.1-1.1.1-1.648V6.124zm-6.023 9.715a.84.84 0 0 1-.08.378c-.118.245-.329.38-.595.41-.232.025-.44-.04-.614-.2-.198-.18-.31-.41-.405-.647-.185-.46-.354-.926-.533-1.387-.02-.053-.054-.1-.07-.155-.025-.08-.075-.11-.163-.11H9.49c-.09 0-.14.03-.163.114-.023.076-.055.15-.08.226-.173.454-.34.91-.52 1.36-.1.258-.23.498-.457.657-.257.18-.536.2-.81.06a.73.73 0 0 1-.4-.487c-.048-.18-.02-.354.05-.52.83-2.008 1.66-4.016 2.49-6.024.135-.326.27-.652.406-.977.16-.386.443-.58.86-.573.41.007.686.2.84.578.87 2.102 1.74 4.205 2.608 6.308.065.157.13.314.16.48z"/></svg>
+      </div>
+      <div class="link-text">
+        <span class="link-label">Apple Music</span>
+        <span class="link-sub">SPLPH</span>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <a class="link-item" href="https://open.spotify.com/artist/3ec6k7L08vl6Yssj3wrePl?si=nn9yo0BCQhiOqB6C2JUMeA" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+      </div>
+      <div class="link-text">
+        <span class="link-label">Spotify</span>
+        <span class="link-sub">SPLPH</span>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <a class="link-item" href="https://www.amazon.com/music/player/artists/B087M6JRY3/splph" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.7-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.051-.873-1.238-1.276-1.814-2.107-1.733 1.767-2.96 2.294-5.207 2.294-2.658 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.371-5.164 1.715-.754 4.11-.891 5.942-1.099v-.41c0-.753.06-1.642-.384-2.294-.385-.579-1.124-.82-1.775-.82-1.205 0-2.277.618-2.54 1.897-.054.285-.261.567-.549.582l-3.061-.333c-.259-.056-.547-.266-.472-.66.704-3.716 4.06-4.838 7.066-4.838 1.537 0 3.547.41 4.758 1.574 1.538 1.436 1.392 3.352 1.392 5.438v4.923c0 1.481.616 2.13 1.192 2.929.204.285.247.628-.01.839-.645.541-1.794 1.537-2.424 2.099l-.01-.001zm3.559 1.988c-2.748 1.472-5.735 2.181-8.453 2.181-4.027 0-7.927-1.393-11.081-3.706-.277-.202-.481.154-.251.416 2.925 3.326 6.786 5.326 11.076 5.326 3.06 0 6.467-1.102 8.92-3.076.389-.316.047-.762-.211-.141zm.528-1.686c-.195-.147-1.177-.07-1.625-.036-.137.011-.158-.103-.035-.19.795-.559 2.101-.398 2.253-.21.152.19-.041 1.501-.786 2.127-.115.097-.224.048-.173-.083.167-.417.542-1.364.366-1.608z"/></svg>
+      </div>
+      <div class="link-text">
+        <span class="link-label">Amazon Music</span>
+        <span class="link-sub">SPLPH</span>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <a class="link-item" href="https://tidal.com/artist/19225823/u" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M12.012 3.992L8.008 7.996 4.004 3.992 0 7.996l4.004 4.004 4.004-4.004 4.004 4.004 4.004-4.004zM8.008 16.004l-4.004-4.004L0 16.004 4.004 20.008zM16.016 3.992l-4.004 4.004 4.004 4.004L20.02 7.996zM19.996 11.992l-4.004 4.004 4.004 4.004L24 15.996z"/></svg>
+      </div>
+      <div class="link-text">
+        <span class="link-label">Tidal</span>
+        <span class="link-sub">SPLPH</span>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <p class="section-label">Production VODs</p>
+
+    <a class="link-item" href="https://www.youtube.com/@SPLPH" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </div>
+      <div class="link-text">
+        <span class="link-label">YouTube</span>
+        <span class="link-sub">Full production VODs</span>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <p class="section-label">Writing</p>
+
+    <a class="link-item" href="https://thesoulandthescale.substack.com/" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+      </div>
+      <div class="link-text">
+        <span class="link-label">Substack</span>
+        <span class="link-sub">The Soul and the Scale</span>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+    <p class="section-label">Production Credits</p>
+
+    <div class="credits-box">
+      <div class="credits-title">Worked with</div>
+      <div class="credits-list">
+        <span class="credit-tag">Trapo</span>
+        <span class="credit-tag">Ben Burden</span>
+        <span class="credit-tag">Hxry</span>
+        <span class="credit-tag">MoterNatureBarz</span>
+        <span class="credit-tag">Demetruest</span>
+        <span class="credit-tag">Adult Swim</span>
+      </div>
+    </div>
+
+    <p class="section-label">Contact</p>
+
+    <a class="link-item" href="mailto:NickOnLocation@proton.me">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </div>
+      <div class="link-text">
+        <span class="link-label">Contact me. Let's Cook!</span>
+        <span class="link-sub">NickOnLocation@proton.me</span>
+      </div>
+      <span class="link-arrow">›</span>
+    </a>
+
+  </div>
+
+</body>
+</html>
