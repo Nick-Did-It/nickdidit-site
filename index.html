@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nick.Did_it — SPLPH</title>
+
+  <title>Nick Did It — Producer, Composer, Mix Engineer</title>
+  <meta name="description" content="Nick Did It / SPLPH — producer, composer, drummer, mixing engineer, and sound designer available for sync, custom music, production, and client work." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -22,8 +26,8 @@
     }
 
     .avatar {
-      width: 80px;
-      height: 80px;
+      width: 84px;
+      height: 84px;
       border-radius: 50%;
       background: #ebebeb;
       border: 1px solid #d8d8d8;
@@ -31,10 +35,294 @@
       align-items: center;
       justify-content: center;
       font-family: 'DM Serif Display', serif;
-      font-size: 28px;
-      color: #888;
+      font-size: 30px;
+      color: #777;
       margin-bottom: 1.25rem;
     }
+
+    .name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #1a1a1a;
+      text-align: center;
+    }
+
+    .alias {
+      font-size: 12px;
+      font-weight: 500;
+      color: #888;
+      letter-spacing: 0.12em;
+      text-align: center;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .bio {
+      font-size: 14px;
+      font-weight: 300;
+      color: #5f5f5f;
+      text-align: center;
+      max-width: 360px;
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      max-width: 440px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta {
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 12px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid #1a1a1a;
+      transition: 0.15s ease;
+    }
+
+    .cta.primary {
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    .cta.secondary {
+      background: transparent;
+      color: #1a1a1a;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+      opacity: 0.88;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin-top: 0.75rem;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #ffffff;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      text-decoration: none;
+      color: inherit;
+      transition: 0.15s;
+    }
+
+    .link-item:hover {
+      background: #f9f9f9;
+      transform: translateY(-1px);
+    }
+
+    .featured {
+      background: #fffdf8;
+      border-color: #c7c0b8;
+    }
+
+    .link-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .link-text { flex: 1; }
+
+    .link-label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .link-sub {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .services-box,
+    .video-box {
+      width: 100%;
+      max-width: 440px;
+      background: #ffffff;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 0.5rem;
+    }
+
+    .box-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .services-list {
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.45;
+    }
+
+    .services-list span:first-child {
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+
+    .video-box {
+      padding: 10px;
+    }
+
+    .video-box iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .video-caption {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.45;
+      margin: 10px 6px 2px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #1a1a1a; color: #f0f0f0; }
+      .avatar { background: #2a2a2a; border-color: #3a3a3a; color: #777; }
+      .name { color: #f0f0f0; }
+      .alias { color: #777; }
+      .bio { color: #aaa; }
+      .cta.primary { background: #f0f0f0; color: #1a1a1a; border-color: #f0f0f0; }
+      .cta.secondary { color: #f0f0f0; border-color: #555; }
+      .link-item, .services-box, .video-box { background: #242424; border-color: #333; }
+      .link-item:hover { background: #2c2c2c; }
+      .featured { background: #292620; border-color: #4a4034; }
+      .services-list { color: #999; }
+      .services-list span:first-child { color: #f0f0f0; }
+      .link-sub, .video-caption { color: #999; }
+      .link-icon { background: #2e2e2e; color: #888; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="avatar">N</div>
+
+  <h1 class="name">Nick Did It</h1>
+  <p class="alias">SPLPH · Producer · Composer · Drummer</p>
+
+  <p class="bio">
+    Original music for artists, film, and visual media.
+    Available for sync, custom work, and production.
+  </p>
+
+  <div class="cta-row">
+    <a class="cta primary" href="mailto:NickOnLocation@proton.me">Work With Me</a>
+    <a class="cta secondary" href="https://splph.bandcamp.com" target="_blank" rel="noopener">Listen</a>
+  </div>
+
+  <div class="services-box">
+    <div class="box-title">For Clients / Sync</div>
+
+    <div class="services-list">
+      <span>Available for sync, production, and custom music work</span>
+      <span>I create original, licensable music for film, TV, commercials, and digital content.</span>
+      <span>Production, drums, composition, and full sound design available.</span>
+      <span>Clean stems, instrumentals, edits, and fast turnaround on request.</span>
+    </div>
+  </div>
+
+  <div class="links">
+
+    <p class="section-label">Process / Latest Session</p>
+
+    <div class="video-box">
+      <iframe
+        src="https://www.youtube.com/embed/mkhxHOpVVnaApMOI"
+        title="Latest Production VOD"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      <p class="video-caption">
+        Recent production session: sound design, beat-making, arrangement, and process.
+      </p>
+    </div>
+
+    <p class="section-label">Featured Work</p>
+
+    <a class="link-item featured" href="https://music.apple.com/us/album/oil-change/1412971717" target="_blank" rel="noopener">
+      <div class="link-icon">★</div>
+      <div class="link-text">
+        <span class="link-label">Trapo — Oil Change</span>
+        <span class="link-sub">Production credit</span>
+      </div>
+    </a>
+
+    <p class="section-label">Listen</p>
+
+    <a class="link-item" href="https://splph.bandcamp.com" target="_blank" rel="noopener">
+      <div class="link-icon">B</div>
+      <div class="link-text">
+        <span class="link-label">Bandcamp</span>
+        <span class="link-sub">Full catalog</span>
+      </div>
+    </a>
+
+    <a class="link-item" href="https://open.spotify.com/artist/3ec6k7L08vl6Yssj3wrePl?si=nn9yo0BCQhiOqB6C2JUMeA" target="_blank" rel="noopener">
+      <div class="link-icon">S</div>
+      <div class="link-text">
+        <span class="link-label">Spotify</span>
+        <span class="link-sub">SPLPH</span>
+      </div>
+    </a>
+
+    <p class="section-label">Contact</p>
+
+    <a class="link-item featured" href="mailto:NickOnLocation@proton.me">
+      <div class="link-icon">✉</div>
+      <div class="link-text">
+        <span class="link-label">Inquire About Work</span>
+        <span class="link-sub">Sync, production, custom music</span>
+      </div>
+    </a>
+
+  </div>
+
+</body>
+</html>    }
 
     .name {
       font-family: 'DM Serif Display', serif;
