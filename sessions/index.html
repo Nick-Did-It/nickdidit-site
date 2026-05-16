@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Private Sessions — Nick Goergen</title>
+  <meta name="description" content="Book adult drum lessons, production coaching, mixing, sonic reset sessions, barn sound circles, or a creative sound consult with Nick Goergen." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #f5f4f1; --paper: #ffffff; --cream: #fffdf8; --ink: #1a1a1a; --muted: #5f5f5f; --faint: #888; --line: #e0e0e0; --warm-line: #c7c0b8; --earth: #8a6a4e; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: radial-gradient(circle at top right, rgba(63, 70, 56, 0.12), transparent 28rem), var(--bg); color: var(--ink); min-height: 100vh; padding: 0; }
+    a { color: inherit; }
+    .site-wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+    .top-nav { position: sticky; top: 0; z-index: 10; background: rgba(245,244,241,.92); backdrop-filter: blur(14px); border-bottom: .5px solid var(--line); }
+    .nav-inner { max-width: 1080px; margin: 0 auto; padding: .95rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .nav-brand { text-decoration: none; display: grid; gap: .05rem; }
+    .nav-brand strong { font-family: 'DM Serif Display', serif; font-size: 24px; font-weight: 400; letter-spacing: -.02em; }
+    .nav-brand span { font-size: 10px; font-weight: 600; color: var(--faint); letter-spacing: .14em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 1rem; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
+    .nav-links a { text-decoration: none; transition: .15s ease; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links .nav-book { color: #fff; background: var(--ink); border-radius: 999px; padding: .65rem .85rem; }
+    header { padding: 4.75rem 0 2.75rem; }
+    .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--earth); margin-bottom: .85rem; }
+    .hero-title, .section-title, .card-title { font-family: 'DM Serif Display', serif; font-weight: 400; line-height: .98; letter-spacing: -.035em; }
+    .hero-title { font-size: clamp(50px, 8vw, 96px); max-width: 840px; margin-bottom: 1rem; }
+    .intro { font-size: clamp(18px, 2vw, 24px); font-weight: 300; color: #34302c; line-height: 1.38; max-width: 720px; margin-bottom: 1.4rem; }
+    .cta-row { display: flex; gap: 10px; width: 100%; max-width: 460px; margin-bottom: 1.1rem; }
+    .cta { flex: 1; text-align: center; text-decoration: none; border-radius: 999px; padding: 13px 14px; font-size: 13px; font-weight: 700; border: 1px solid var(--ink); transition: .15s ease; letter-spacing: .02em; }
+    .cta.primary { background: var(--ink); color: #fff; }
+    .cta.secondary { background: transparent; color: var(--ink); }
+    section { padding: 3rem 0; }
+    .section-head { display: grid; grid-template-columns: minmax(0,.9fr) minmax(280px,.6fr); gap: 1.75rem; align-items: end; margin-bottom: 1.25rem; }
+    .section-title { font-size: clamp(38px, 6vw, 70px); }
+    .section-note { font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.65; max-width: 520px; }
+    .session-list { display: grid; gap: 12px; }
+    .session-card { background: rgba(255,255,255,.78); border: .5px solid var(--line); border-radius: 18px; padding: 18px; display: grid; grid-template-columns: minmax(0,1fr) minmax(230px,.34fr); gap: 1.25rem; align-items: start; }
+    .card-title { font-size: 34px; margin-bottom: .55rem; }
+    .session-card p { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 700px; }
+    .price-box { background: var(--cream); border: .5px solid var(--warm-line); border-radius: 14px; padding: 14px; font-size: 13px; line-height: 1.5; }
+    .price-box strong { display: block; margin-bottom: .35rem; }
+    .price-box span { display: block; color: var(--muted); }
+    .booking-box { background: #1a1a1a; color: #f0f0f0; border-radius: 20px; padding: 22px; display: grid; grid-template-columns: minmax(0,.75fr) minmax(320px,1fr); gap: 1.25rem; align-items: start; }
+    .booking-box .eyebrow { color: #c7c0b8; }
+    .booking-box .section-note { color: #aaa; margin-top: .75rem; }
+    form { display: grid; gap: .85rem; }
+    label { display: grid; gap: .35rem; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #aaa; }
+    input, select, textarea { width: 100%; border: .5px solid #444; border-radius: 12px; padding: 12px 13px; background: #242424; color: #f0f0f0; font: inherit; outline: none; }
+    select option { color: #1a1a1a; background: #fff; }
+    textarea { min-height: 96px; resize: vertical; }
+    .submit-button { border: 1px solid #f0f0f0; background: #f0f0f0; color: #1a1a1a; border-radius: 999px; padding: 13px 14px; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .small-note { font-size: 12px; color: #999; line-height: 1.45; }
+    .policy-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+    .policy-card { background: rgba(255,255,255,.72); border: .5px solid var(--line); border-radius: 14px; padding: 15px; }
+    .policy-card h3 { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .45rem; }
+    .policy-card p { font-size: 13px; color: var(--muted); line-height: 1.55; }
+    footer { padding: 2.25rem 0 3rem; color: var(--faint); }
+    .footer-grid { border-top: .5px solid var(--line); padding-top: 1.25rem; display: grid; grid-template-columns: 1.1fr repeat(3,.7fr); gap: 1.25rem; }
+    footer h3 { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); margin-bottom: .65rem; }
+    footer a, footer p { display: block; text-decoration: none; font-size: 13px; color: var(--faint); margin-bottom: .4rem; line-height: 1.45; }
+    .fine-print { border-top: .5px solid var(--line); margin-top: 1.25rem; padding-top: 1rem; font-size: 11px; color: #999; line-height: 1.45; }
+    @media (max-width: 860px) { .section-head, .session-card, .booking-box, .footer-grid { grid-template-columns: 1fr; } .policy-grid { grid-template-columns: 1fr; } .nav-inner { align-items: flex-start; } .nav-links { flex-wrap: wrap; justify-content: flex-end; gap: .65rem .9rem; } }
+    @media (max-width: 620px) { .top-nav { position: static; } .nav-inner { display: block; padding: .9rem 1rem; } .nav-brand { margin-bottom: .75rem; } .nav-links { justify-content: flex-start; font-size: 10px; } .site-wrap { padding: 0 1rem; } header { padding: 2.5rem 0 2rem; } .hero-title { font-size: 54px; } .intro { font-size: 19px; } .cta-row { flex-direction: column; max-width: none; } .booking-box { padding: 18px; } form .submit-button { width: 100%; } }
+    @media (prefers-color-scheme: dark) { :root { --bg: #1a1a1a; --paper: #242424; --cream: #292620; --ink: #f0f0f0; --muted: #aaa; --faint: #888; --line: #333; --warm-line: #4a4034; } body { background: radial-gradient(circle at top right, rgba(63,70,56,.12), transparent 28rem), var(--bg); } .top-nav { background: rgba(26,26,26,.92); } .nav-links .nav-book, .cta.primary { background: #f0f0f0; color: #1a1a1a; border-color: #f0f0f0; } .cta.secondary { color: #f0f0f0; border-color: #555; } .session-card, .policy-card { background: #242424; border-color: #333; } .price-box { background: #292620; border-color: #4a4034; } footer h3 { color: #f0f0f0; } }
+  </style>
+</head>
+<body>
+  <nav class="top-nav"><div class="nav-inner"><a class="nav-brand" href="/"><strong>Nick Did It</strong><span>Field Rhythm Studio</span></a><div class="nav-links"><a href="/">Home</a><a href="/sessions/">Sessions</a><a href="/#proof">Work</a><a href="/#sync">Sync / Custom Music</a><a href="https://thesoulandthescale.substack.com/" target="_blank" rel="noopener">Writing</a><a class="nav-book" href="#book">Contact / Book</a></div></div></nav>
+  <main>
+    <header class="site-wrap"><p class="eyebrow">Private Sessions</p><h1 class="hero-title">Book rhythm, sound, production, or reset work.</h1><p class="intro">Grounded one-on-one and small-group sessions for adult beginners, artists, producers, musicians, spiritually open clients, couples, small groups, and people looking for practical creative reset.</p><div class="cta-row"><a class="cta primary" href="#book">Request a Session</a><a class="cta secondary" href="#menu">View Offerings</a></div></header>
+    <section class="site-wrap" id="menu"><div class="section-head"><div><p class="eyebrow">Session Menu</p><h2 class="section-title">Choose the door.</h2></div><p class="section-note">Not sure what fits? Use Creative Sound Consult and tell me what you are trying to work through, build, learn, finish, or reset.</p></div><div class="session-list">
+      <article class="session-card"><div><h3 class="card-title">Adult Drum Lessons</h3><p>Grounded drum lessons for adult beginners and returning players. Groove, timing, coordination, feel, and confidence.</p></div><div class="price-box"><strong>Pricing</strong><span>$75/hr</span><span>First session $60</span><span>4-pack: $260</span><span>8-pack: $480</span></div></article>
+      <article class="session-card"><div><h3 class="card-title">Production Lab</h3><p>Ableton, FL Studio, SP-404 workflow, recording, beats, arrangement, home studio setup, and finishing songs.</p></div><div class="price-box"><strong>Pricing</strong><span>$50/hr virtual</span><span>$75/hr in person</span><span>2-hour in-person lab: $125</span><span>4-session pack: $180 virtual / $260 in-person</span></div></article>
+      <article class="session-card"><div><h3 class="card-title">Song Polish + Mixing</h3><p>For artists with songs recorded but not finished. Vocal cleanup, balance, effects, emotional shape, and final bounce.</p></div><div class="price-box"><strong>Pricing</strong><span>Starting at $150/song</span><span>Full mix: $250/song</span><span>Mix review/fix session: $50/hr virtual</span></div></article>
+      <article class="session-card"><div><h3 class="card-title">Sonic Reset Session</h3><p>Private sound and reiki-informed grounding with breath, sound bowl, harmonium, hand drums, ambient textures, quiet rest, and integration.</p></div><div class="price-box"><strong>Pricing</strong><span>$90 private 60-minute session</span><span>$120 private 75-minute session</span><span>$150 couple/two-person session</span></div></article>
+      <article class="session-card"><div><h3 class="card-title">Barn Sound Circle</h3><p>Small-group sound and rhythm meditation in a quiet barn/acreage setting. Part sound bath, part rhythm meditation, part reflective reset.</p></div><div class="price-box"><strong>Pricing</strong><span>$25/person</span><span>4-person minimum</span><span>Private groups from $200</span></div></article>
+      <article class="session-card"><div><h3 class="card-title">Creative Sound Consult</h3><p>A one-time session to figure out what you need: drum lessons, production help, mixing, sonic reset, or creative direction.</p></div><div class="price-box"><strong>Pricing</strong><span>$50 virtual</span><span>$75 in person</span></div></article>
+    </div></section>
+    <section class="site-wrap" id="book"><div class="booking-box"><div><p class="eyebrow">Request a Session</p><h2 class="section-title">Tell me what you want to work on.</h2><p class="section-note">I’m making this work available. Message me if you want a slot or want help figuring out which session fits.</p><p class="section-note">Sonic reset sessions are for grounding, reflection, meditation, rest, breath, sound, and reset. They are not therapy or medical treatment.</p></div>
+      <form name="session-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/sessions/thank-you.html"><input type="hidden" name="form-name" value="session-request" /><p style="display:none;"><label>Do not fill this out: <input name="bot-field" /></label></p><label>Name<input name="name" type="text" autocomplete="name" required /></label><label>Email<input name="email" type="email" autocomplete="email" required /></label><label>Phone optional<input name="phone" type="tel" autocomplete="tel" /></label><label>Which session are you interested in?<select name="session_interest" required><option value="">Select one</option><option>Adult Drum Lessons</option><option>Production Lab</option><option>Song Polish + Mixing</option><option>Sonic Reset Session</option><option>Barn Sound Circle</option><option>Creative Sound Consult</option><option>Not sure yet</option></select></label><label>In person or virtual?<select name="format" required><option value="">Select one</option><option>In person</option><option>Virtual</option><option>Either works</option></select></label><label>What are you hoping to work on?<textarea name="goals" required></textarea></label><label>Preferred days/times<textarea name="preferred_times"></textarea></label><label>Anything I should know before we meet?<textarea name="notes"></textarea></label><button class="submit-button" type="submit">Request a Session</button><p class="small-note">You can also email directly: NickOnLocation@proton.me</p></form>
+    </div></section>
+    <section class="site-wrap"><div class="section-head"><div><p class="eyebrow">Policies</p><h2 class="section-title">Simple terms.</h2></div><p class="section-note">Clear expectations keep the work clean.</p></div><div class="policy-grid"><div class="policy-card"><h3>Booking + cancellation</h3><p>Payment is due when booking or before the session begins. 24-hour cancellation notice is required. Same-day cancellations are charged 50%, unless emergency.</p></div><div class="policy-card"><h3>Lesson slots</h3><p>Weekly lesson slots are held only for package clients.</p></div><div class="policy-card"><h3>Mixing</h3><p>Mixing requires a 50% deposit to start. Balance is due before final WAV delivery. Basic Song Polish includes one revision. Additional revisions are $40 each or $50/hr for live revision sessions.</p></div><div class="policy-card"><h3>Mixing files</h3><p>WAV stems preferred. Vocals should be exported from the same starting point. Include the instrumental, a reference song if available, and notes on the desired emotional direction of the track.</p></div><div class="policy-card"><h3>Private groups</h3><p>Private groups require a $50 deposit to reserve.</p></div><div class="policy-card"><h3>Sonic reset note</h3><p>These sessions use grounding, reflection, meditation, rest, breath, and sound. They are not therapy or medical treatment.</p></div></div></section>
+  </main>
+  <footer class="site-wrap"><div class="footer-grid"><div><h3>Nick Did It</h3><p>Field Rhythm Studio</p><p>Drums, production, mixing, and sonic reset sessions with Nick Goergen.</p></div><div><h3>Explore</h3><a href="/">Home</a><a href="/#proof">Work</a><a href="/#sync">Sync / Custom Music</a><a href="https://thesoulandthescale.substack.com/" target="_blank" rel="noopener">Writing</a></div><div><h3>Listen</h3><a href="https://splph.bandcamp.com" target="_blank" rel="noopener">Bandcamp</a><a href="https://open.spotify.com/artist/3ec6k7L08vl6Yssj3wrePl?si=nn9yo0BCQhiOqB6C2JUMeA" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/us/artist/splph/1273031883" target="_blank" rel="noopener">Apple Music</a><a href="https://www.youtube.com/@SPLPH" target="_blank" rel="noopener">YouTube</a></div><div><h3>Contact</h3><a href="mailto:NickOnLocation@proton.me">NickOnLocation@proton.me</a><a href="https://www.instagram.com/nick.did_it/" target="_blank" rel="noopener">@nick.did_it</a></div></div><p class="fine-print">© 2026 Nick Goergen / Nick Did It.</p></footer>
+</body>
+</html>
